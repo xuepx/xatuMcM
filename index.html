@@ -63,10 +63,11 @@
             console.log("Subscribe remote stream successfully: " + stream.getId());
             console.log(stream.hasAudio());
             if (played == 0) {
-                stream.play('agora_screen');
+                stream.play('agora_video');
                 played = played + 1;
             } else {
-                stream.play('agora_video');
+                stream.play('agora_screen');
+                played = 0;
             }
         });
     </script>
