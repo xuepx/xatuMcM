@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>教师</title>
+  <style>
+    #code {
+      width: 80px;
+      font-size: 3em;
+      color:maroon;
+      font-weight: 900;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="code"></div>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script language="javascript">
+    var now = new Date();
+    var cc = now.getTime() / 1000 / 60 / 5;
+    cc = cc.toFixed(0);
+    cc = md5(cc).substr(5, 4);
+    document.getElementById('code').innerText = cc;
+  </script>
+</body>
+
+</html>
