@@ -19,7 +19,7 @@ var shareScreen = function() {
         audio: true,
         video: true,
         screen: false,
-        mediaSource: 'screen' // 'screen', 'application', 'window'
+        //mediaSource: 'screen' // 'screen', 'application', 'window'
       });
       //设置本地流视频属性
       screenStream.setVideoProfile("720p");
@@ -55,12 +55,13 @@ var live = function() {
         audio: false,
         video: false,
         screen: true,
+        mediaSource: 'screen'
       //chrome extension id
       //extensionId: "minllpmhdgpndnkomcoccfekfegnlikg"
       }
       var localStream = AgoraRTC.createStream(options);
       //设置本地流视频属性
-      localStream.setVideoProfile("480p_4");
+      localStream.setVideoProfile("720p");
       //初始化本地流, 并同时申请本地媒体采集权限
       localStream.init(function() {
         console.log("Local stream initialized");
