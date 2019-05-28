@@ -16,9 +16,9 @@ var shareScreen = function() {
       //创建屏幕视频流
       var screenStream = AgoraRTC.createStream({
         streamID: uid,
-        audio: false,
-        video: false,
-        screen: true,
+        audio: true,
+        video: true,
+        screen: false,
         mediaSource: 'screen' // 'screen', 'application', 'window'
       });
       //设置本地流视频属性
@@ -52,9 +52,9 @@ var live = function() {
       //创建本地流, 修改对应的参数可以指定启用/禁用特定功能
       var options = {
         streamID: uid,
-        audio: true,
-        video: true,
-        screen: false,
+        audio: false,
+        video: false,
+        screen: true,
       //chrome extension id
       //extensionId: "minllpmhdgpndnkomcoccfekfegnlikg"
       }
