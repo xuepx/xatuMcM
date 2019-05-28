@@ -65,10 +65,10 @@ var live = function() {
       localStream.init(function() {
         console.log("Local stream initialized");
         localStream.play("agora_video");
+        shareScreen();
         //发布本地流以使其可以被远端接收到
         client.publish(localStream, function(err) {
           console.err("Publish stream failed", err);
-          shareScreen();
         });
       });
     });
